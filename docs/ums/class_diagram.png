@@ -1,0 +1,2 @@
+mkdir diagrams
+mv class_diagram.png diagrams/
