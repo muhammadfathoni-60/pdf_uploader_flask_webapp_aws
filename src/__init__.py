@@ -8,7 +8,7 @@ from flask import request
 from flask import session
 from src.process import Process
  
-application= app = Flask(__name__)
+application = app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['ALLOWED_EXTENSIONS'] = set(['pdf'])
 
@@ -21,7 +21,7 @@ def allowed_file(filename):
 @app.route('/')
 def home():
     if not session.get('logged_in'):
-    	message="Welcome to our Portal!"
+        message = "Welcome to our Portal!"
         flash(message)
         return render_template('login.html')
     else:
@@ -35,7 +35,7 @@ def user_login():
         if response['password'] == request.form['password'] and response['email_address'] == request.form['email address']:
             session['logged_in'] = True
         else:
-            message="Please enter correct username and password!"
+            message = "Please enter correct username and password!"
             flash(message)
             session['logged_in'] = False
     except Exception as e:
@@ -72,11 +72,11 @@ def upload():
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 list_files = os.listdir('uploads')
-                f_save=str(len(list_files)+1)+'.pdf'            
+                f_save = str(len(list_files) + 1) + '.pdf'            
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], f_save))            
                 filenames.append(filename)
-                key_name='uploads/'+f_save
-                process_client.storage_process.upload_file(key_name,'pranab1',f_save)
+                key_name = 'uploads/' + f_save
+                process_client.storage_process.upload_file(key_name, 'pranab1', f_save)
                 process_client.database_process.insert_item_into_storage_db(
                     s3_key_name=key_name,
                     original_name=filename
@@ -86,11 +86,9 @@ def upload():
     else:
         return render_template('upload_file.html', filenames=filenames)
 
-
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(
         app.config['UPLOAD_FOLDER'],
         filename
     )
- 
