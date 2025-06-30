@@ -1,0 +1,129 @@
+{
+  "id": "da171c3b-cf55-4c2d-bafd-0ba2caa452f9",
+  "version": "2.0",
+  "name": "APLIKASI DIREKTORI ",
+  "url": "https://upgraded-chainsaw-r4r7xwpxjvg72pv7v-9000.app.github.dev",
+  "tests": [{
+    "id": "01769dd3-c02d-4373-86fd-0403bb43cabb",
+    "name": "TEST WEBAPP",
+    "commands": [{
+      "id": "41779bc6-7818-46d1-9d87-e2055b37b1a4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dca93a13-3c32-479b-b979-b78e72b2e840",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74f2cdf7-7d99-4fd6-b27c-60d984d6094f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68666406-8335-4594-8a65-18ba0f97f29c",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.control-group:nth-child(1) > .login-field", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5272b2b6-50a8-4075-a687-3f0e330c2be9",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.control-group:nth-child(1) > .login-field", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "muhammadfathoni432@gmail.com"
+    }, {
+      "id": "63fb10ce-fbdd-4102-86b2-bd62cda6e0c5",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.control-group:nth-child(2) > .login-field", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed5c66f8-e3ad-4786-b86e-4a104d699bce",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.control-group:nth-child(2) > .login-field", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TIARAMAHARANI12345"
+    }, {
+      "id": "56e8cbc0-f68b-4bc4-8104-785e9acc1e43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Sign in']", "xpath:attributes"],
+        ["xpath=//form/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ce17c63-98c2-42a4-96f7-9456bdab6296",
+      "comment": "",
+      "command": "click",
+      "target": "css=#frame-126380674703440 .current",
+      "targets": [
+        ["css=#frame-126380674703440 .current", "css:finder"],
+        ["xpath=//div[@id='frame-126380674703440']/div/pre[6]", "xpath:idRelative"],
+        ["xpath=//pre[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49216bc5-d770-428c-ba68-3ec38a22c778",
+      "comment": "",
+      "command": "click",
+      "target": "css=.expanded > .line:nth-child(3)",
+      "targets": [
+        ["css=.expanded > .line:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='frame-126380674703440']/div/pre[3]", "xpath:idRelative"],
+        ["xpath=//pre[3]", "xpath:position"],
+        ["xpath=//pre[contains(.,'        WSGI application. This calls :meth:`wsgi_app`, which can be')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7d0a5d9c-2a6b-4eaf-912d-e70a9c26abef",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01769dd3-c02d-4373-86fd-0403bb43cabb"]
+  }],
+  "urls": ["https://upgraded-chainsaw-r4r7xwpxjvg72pv7v-9000.app.github.dev/"],
+  "plugins": []
+}
